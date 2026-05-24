@@ -1,0 +1,198 @@
+:root,
+.visual-refresh,
+.visual-refresh.theme-dark {
+  --highlight: rgb(var(--rgb-highlight));
+  --rgb-background: 0, 9, 0;
+  --background: rgb(var(--rgb-background));
+  --text: rgb(var(--rgb-text));
+  --rgb-close-button: 212, 18, 39;
+  --close-button: rgb(var(--rgb-close-button));
+  --rgb-online-color: 57, 255, 20;
+  --online-color: rgb(var(--rgb-online-color));
+  --rgb-afk-color: 255, 255, 51;
+  --afk-color: rgb(var(--rgb-afk-color));
+  --rgb-dnd-color: 255, 0, 0;
+  --dnd-color: rgb(var(--rgb-dnd-color));
+  --rgb-streaming-color: 188, 19, 254;
+  --streaming-color: rgb(var(--rgb-streaming-color));
+
+  --scrollbar-thin-thumb: var(--highlight);
+  --scrollbar-auto-thumb: var(--highlight);
+  --scrollbar-auto-scrollbar-color-thumb: var(--highlight);
+  --scrollbar-thin-track: transparent;
+  --scrollbar-auto-track: transparent;
+  --scrollbar-auto-scrollbar-color-track: transparent;
+
+  --transition-time: 0.3s;
+
+  --background-image: unset;
+  --background-position: center;
+  --background-size: cover;
+  --background-blur: 5px;
+  --background-brightness: 100%;
+
+  --show-original-title: 0;
+  --show-custom-title: 1;
+  --custom-title-text: "El Katiba (tm)";
+  --custom-title-font-size: 16px;
+  --custom-title-font-weight: bold;
+  --custom-title-margin-top: 0px;
+  --custom-title-margin-left: 0px;
+
+  /* --== Modifying some default variables ==-- */
+
+  /* --== BACKGROUND ==-- */
+  --background-primary: var(--background);
+  --background-mobile-primary: var(--background);
+  --background-secondary: var(--background) !important;
+  --background-mobile-secondary: var(--background);
+  --background-secondary-alt: var(--background);
+  --background-tertiary: var(--background);
+  --background-accent: var(--background);
+  --background-floating: var(--background);
+  --background-nested-floating: var(--background);
+  --background-modifier-accent: rgba(var(--rgb-highlight), 20%);
+  --background-modifier-hover: rgba(var(--rgb-highlight), 10%);
+  --background-modifier-active: rgba(var(--rgb-highlight), 30%);
+  --background-modifier-selected: var(--rgb-highlight);
+  --background-base-lowest: var(--background);
+  --background-base-low: var(--background);
+  --background-surface-high: var(--background);
+
+  /* --== MODALS ==-- */
+  --modal-background: var(--background);
+  --modal-footer-background: var(--background);
+  --background-floating: var(--background);
+  --bg-surface-overlay: var(--background);
+
+  /* --== ACTIVITY CARDS ==-- */
+  --activity-card-background: var(--background);
+
+  /* --== HEADER ==-- */
+  --header-primary: var(--highlight);
+  --header-secondary: var(--highlight);
+
+  /* --== CHAT ==-- */
+  --chat-background: var(--background);
+  --chat-border: var(--highlight);
+  --chat-input-container-background: var(--background);
+
+  /* --== SPOILERS ==-- */
+  --spoiler-hidden-background: var(--highlight);
+  --spoiler-revealed-background: rgba(var(--rgb-highlight), 20%);
+
+  /* --== INPUT ==-- */
+  --input-background: var(--background);
+  --textbox-markdown-syntax: var(--highlight);
+  // --input-placeholder-text: var() TODO: Not sure if I should style this
+
+  /* --== LOGO ==-- */
+  --logo-primary: var(--highlight);
+  --control-brand-foreground: var(--highlight);
+  --control-brand-foreground-new: var(--highlight);
+
+  /* --== MESSAGES ==-- */
+  --background-mentioned: rgba(var(--rgb-highlight), 30%);
+  --background-mentioned-hover: rgba(var(--rgb-highlight), 40%);
+  --background-message-hover: rgba(var(--rgb-highlight), 10%);
+  --background-message-highlight: rgba(var(--rgb-highlight), 30%);
+  --background-message-highlight-hover: rgba(var(--rgb-highlight), 40%);
+  --background-message-automod: rgba(var(--rgb-highlight), 20%);
+  --background-message-automod-hover: rgba(var(--rgb-highlight), 40%);
+
+  /* --== CHANNELS ==-- */
+  --channeltextarea-background: var(--background);
+
+  /* --== TEXT ==-- */
+  --text-link: var(--highlight);
+  --text-link-low-saturation: rgba(var(--rgb-highlight), 50%);
+  --text-positive: var(--online-color);
+  --text-warning: var(--afk-color);
+  --text-danger: var(--dnd-color);
+  --text-brand: var(--highlight);
+  --text-normal: var(--text);
+  --text-muted: var(--text);
+  --channels-default: var(--text);
+
+  /* --== BUTTONS ==-- */
+  $buttons: (
+    "danger": "rgb-close-button",
+    "positive": "rgb-online-color",
+    "primary": "rgb-highlight",
+    "secondary": "rgb-highlight",
+    "brand": "rgb-highlight",
+  );
+
+  @each $name, $color in $buttons {
+    --button-#{$name}-background-disabled: rgba(var(--#{$color}), 20%);
+    --button-#{$name}-background: rgba(var(--#{$color}), 20%);
+    --button-#{$name}-background-hover: rgba(var(--#{$color}), 70%);
+    --button-#{$name}-background-active: rgba(var(--#{$color}), 100%);
+    --button-outline-#{$name}-border: rgba(var(--#{$color}), 50%);
+    --button-outline-#{$name}-background: rgba(var(--#{$color}), 50%);
+    --button-outline-#{$name}-background-hover: rgba(var(--#{$color}), 70%);
+    --button-outline-#{$name}-background-active: rgba(var(--#{$color}), 100%);
+    --button-outline-#{$name}-text: rgba(var(--#{$color}), 50%);
+    --button-outline-#{$name}-text-hover: rgba(var(--#{$color}), 70%);
+    --button-outline-#{$name}-text-active: rgba(var(--#{$color}), 100%);
+    --button-outline-#{$name}-border-hover: rgba(var(--#{$color}), 70%);
+    --button-outline-#{$name}-border-active: rgba(var(--#{$color}), 100%);
+  }
+
+  --button-filled-brand-background: rgba(var(--rgb-highlight), 20%);
+  --button-filled-brand-background-hover: rgba(var(--rgb-highlight), 70%);
+  --button-filled-brand-background-border: rgba(var(--rgb-highlight), 50%);
+  --button-filled-brand-background-active: rgba(var(--rgb-highlight), 100%);
+
+  --button-outline-danger-text: var(--rgb-text);
+  --button-outline-danger-text-hover: var(--rgb-text);
+  --button-outline-danger-text-active: var(--rgb-text);
+
+  /* --== SEARCH POPOUT ==-- */
+  --search-popout-option-user-nickname: var(--highlight);
+  --search-popout-option-user-username: rgba(var(--rgb-highlight), 70%);
+  --search-popout-option-filter-text: rgba(var(--rgb-highlight), 70%);
+  --search-popout-date-picker-border: 1px solid var(--highlight);
+
+  /* --== INTERACTIVE ELEMENTS ==-- */
+  --interactive-muted: rgba(var(--rgb-highlight), 20%);
+  --interactive-normal: rgba(var(--rgb-highlight), 50%);
+  --interactive-hover: rgba(var(--rgb-highlight), 100%);
+  --interactive-active: rgb(var(--rgb-highlight));
+
+  /* --== I DON'T EVEN KNOW, WHY DO YOU DO THIS DISCORD ==-- */
+  --status-danger: var(--dnd-color);
+  --status-warning: var(--afk-color);
+  --status-positive: var(--online-color);
+
+  /* --== USER PROFILES ==-- */
+  --profile-gradient-primary-color: var(--rgb-background);
+  --profile-gradient-secondary-color: var(--rgb-background);
+
+  /* --== "BRAND" COLOR ==-- */
+  --bg-brand: var(--highlight);
+  --brand-experiment: var(--highlight);
+
+  @for $i from 1 through 9 {
+    --brand-experiment-#{$i}00: var(--highlight);
+    --brand-experiment-#{$i}30: var(--highlight);
+    --brand-experiment-#{$i}60: var(--highlight);
+  }
+
+  --brand-experiment-05a: var(--highlight);
+  $counter: 10;
+
+  @while $counter < 100 {
+    --brand-experiment-#{$counter}a: var(--highlight);
+    $counter: $counter + 5;
+  }
+
+  --primary-630: var(--background);
+  --brand-500: var(--highlight);
+
+  /* --== APP BORDERS ==-- */
+  --border-faint: rgb(var(--rgb-highlight));
+  --border-subtle: rgb(var(--rgb-highlight));
+  --app-border-frame: rgb(var(--rgb-highlight));
+  --background-modifier-accent: rgb(var(--rgb-highlight));
+}

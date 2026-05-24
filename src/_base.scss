@@ -1,0 +1,27 @@
+@use 'components/background_resets';
+@use 'components/status_indicators';
+@use 'components/unread_messages';
+@use 'components/user_list';
+@use 'components/user_panel';
+@use 'components/user_profile';
+@use 'components/reactions';
+@use 'components/bots';
+@use 'components/chat';
+@use 'components/channels';
+@use 'components/gif_emoji_picker';
+@use 'components/app_picker';
+
+.theme-dark {
+  /* --== Hide weird unused stuff ==-- */
+  .children__9293f:after,
+  .form_f75fb0::before,
+  .option__56fec:after {
+    display: none;
+  }
+}
+
+/* --== Change font ==-- */
+html,
+body {
+  font-family: "Share Tech Mono", monospace;
+}

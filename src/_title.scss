@@ -1,0 +1,13 @@
+.title_c38106 {
+  &::before {
+    position: fixed;
+    left: 10px;
+    color: var(--highlight);
+    content: var(--custom-title-text);
+    font-size: calc(var(--custom-title-font-size) * var(--show-custom-title));
+    font-weight: var(--custom-title-font-weight);
+    margin-top: var(--custom-title-margin-top);
+    margin-left: var(--custom-title-margin-left);
+    display: block;
+  }
+}
